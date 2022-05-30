@@ -494,7 +494,7 @@ contract OpenFarmVault is IOpenFarmVault, FarmCoin {
 
 pragma solidity =0.5.16;
 
-contract OpenFarmBank is IOpenFarmBank {
+contract TheOpenFarmBank is IOpenFarmBank {
     address public feeTo;
     address public feeToSetter;
     bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(OpenFarmVault).creationCode));
