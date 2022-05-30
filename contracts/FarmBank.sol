@@ -1,10 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+/**
 // UniswapV2 Fork
 
 // IUniswapV2Factory -> IOpenFarmBank
 // UniswapV2Factory -> OpenFarmBank
 // factory -> bank
+
+// UniswapV2Library -> FarmLibrary
+// IUniswapV2Router01 -> IFarmControllerBase
+// IUniswapV2Router02 -> IFarmController
+// UniswapV2Router02 -> OpenFarmController
 
 // IUniswapV2Pair -> IOpenFarmVault
 // UniswapV2Pair -> OpenFarmVault
@@ -14,6 +20,7 @@
 
 // IUniswapV2Callee -> IFarmer
 // uniswapV2Call -> farmCall
+**/
 
 
 pragma solidity >=0.5.0;
@@ -134,8 +141,8 @@ pragma solidity =0.5.16;
 contract FarmCoin is IFarmCoin {
     using SafeMath for uint;
 
-    string public constant name = 'FarmCoin';
-    string public constant symbol = 'FT';
+    string public constant name = 'OpenFarm Coin';
+    string public constant symbol = 'COIN';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
